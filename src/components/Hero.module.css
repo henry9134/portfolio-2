@@ -1,0 +1,25 @@
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100vh;
+  margin-left: 360px; /* 👈 Match sidebar width */
+  padding-top: 200px;  /* 👈 Controls downward positioning */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1; /* Make sure it's under sidebar */
+}
+
+.overlay {
+  text-align: left;
+  color: #111;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 1.4;
+  font-weight: bold;
+  max-width: 800px;
+}

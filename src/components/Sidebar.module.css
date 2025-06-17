@@ -1,0 +1,87 @@
+.sidebar {
+  width: 160px;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px 20px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.navWrapper {
+  padding-top: 180px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative; /* Enables popup alignment */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #aaa;
+}
+
+/* RESUME container aligns popup */
+.resumeContainer {
+  position: relative;
+}
+
+.resumeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.resumeBtn:hover {
+  text-decoration: underline;
+  color: #aaa;
+}
+
+.popupBox {
+  position: absolute;
+  top: 0;
+  left: 180px; /* Align to the right of the sidebar */
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+}
+
+.popupBox a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.popupBox a:hover {
+  text-decoration: underline;
+  color: #111;
+}

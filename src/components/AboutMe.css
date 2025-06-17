@@ -1,0 +1,33 @@
+.about-container {
+  position: relative;
+  z-index: 100;
+  margin: 80px auto 0;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+}
+
+
+.about-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.about-heading h3 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  opacity: 0.8;
+}
+
