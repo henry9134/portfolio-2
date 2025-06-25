@@ -14,12 +14,31 @@
 
 .overlay {
   text-align: left;
-  color: #111;
+  color: #000000;
 }
 
-h1 {
-  font-size: 64px;
+.heading {
+  font-family: 'GazeNozarashi', serif;
+  font-size: 56px;
   line-height: 1.4;
   font-weight: bold;
   max-width: 800px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.socialIcons img {
+  width: 28px;
+  height: 28px;
+  filter: none; /* ✅ Remove the white filter */
+  transition: opacity 0.2s;
+}
+
+.socialIcons img:hover {
+  opacity: 0.7;
 }

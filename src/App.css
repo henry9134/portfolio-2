@@ -1,4 +1,9 @@
 /* === Background and Base Styles === */
+html, body, #root {
+  height: 100vh;
+  overflow: hidden;
+}
+
 body {
   background-image: url('./assets/background.jpg');
   background-size: cover;
@@ -27,7 +32,7 @@ body {
 .language-toggle-text {
   font-weight: bold;
   font-size: 14px;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 

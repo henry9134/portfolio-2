@@ -1,10 +1,10 @@
 import styles from './Hero.module.css';
 
-export default function Hero({ language, onContactClick }) {
+export default function Hero({ language }) {
   return (
     <div className={styles.hero}>
       <div className={styles.overlay}>
-        <h1>
+        <h1 className={styles.heading}>
           {language === 'en' ? (
             <>
               Hi, I’m <strong>Henry</strong> — <br />
@@ -19,6 +19,15 @@ export default function Hero({ language, onContactClick }) {
             </>
           )}
         </h1>
+
+        <div className={styles.socialIcons}>
+          <a href="https://github.com/henry9134" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/github.png" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/henry-santiago13/" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/linkedin.png" alt="LinkedIn" />
+          </a>
+        </div>
       </div>
     </div>
   );

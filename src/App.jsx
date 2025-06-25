@@ -4,7 +4,8 @@ import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
 import AboutMePage from "./pages/AboutMePage";
 import ResumePopup from "./components/ResumePopup";
-import ContactPopup from "./components/ContactPopup"; // ⬅️ new
+import ContactPopup from "./components/ContactPopup";
+import LiveDemoButtons from "./components/LiveDemoButtons"; // ⬅️ Vertical live demo sidebar
 import "./App.css";
 
 export default function App() {
@@ -14,14 +15,20 @@ export default function App() {
 
   return (
     <>
+      {/* Language Toggle Button */}
       <div className="language-toggle-wrapper">
         <span
           className="language-toggle-text"
-          onClick={() => setLanguage((prev) => (prev === "en" ? "jp" : "en"))}
+          onClick={() =>
+            setLanguage((prev) => (prev === "en" ? "jp" : "en"))
+          }
         >
-          {language === "en" ? "日本/日本語" : "Switch to EN/English"}
+          {language === "en" ? "日本/日本語" : "EN/English"}
         </span>
       </div>
+
+      {/* Fixed Vertical Live Demo Buttons on Right */}
+      <LiveDemoButtons language={language} />
 
       <Routes>
         <Route
@@ -33,7 +40,10 @@ export default function App() {
                 setShowResumes={setShowResumes}
                 setShowContact={setShowContact}
               />
-              <Hero language={language} onContactClick={() => setShowContact(!showContact)} />
+              <Hero
+                language={language}
+                onContactClick={() => setShowContact(!showContact)}
+              />
               {showResumes && (
                 <div className="resume-popup-container">
                   <ResumePopup language={language} />
@@ -47,7 +57,10 @@ export default function App() {
             </>
           }
         />
-        <Route path="/about" element={<AboutMePage language={language} />} />
+        <Route
+          path="/about"
+          element={<AboutMePage language={language} />}
+        />
       </Routes>
     </>
   );

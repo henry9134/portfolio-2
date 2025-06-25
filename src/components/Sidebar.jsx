@@ -9,7 +9,7 @@ export default function Sidebar({ language, setShowResumes, setShowContact }) {
         <nav className={styles.nav}>
           <a href="/about">{language === "en" ? "ABOUT" : "自己紹介"}</a>
 
-          <a href="#projects">{language === "en" ? "PROJECTS" : "プロジェクト"}</a>
+          <a href="#projects">{language === "en" ? "github repositories" : "GitHub リポジトリ"}</a>
 
           <a
             href="#resume"
